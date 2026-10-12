@@ -7,7 +7,7 @@
   <meta name="description" content="Asesoría consultiva en acabados para proyectos residenciales y comerciales: pisos, muros, baños y exteriores especificados para durar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="tokens/tokens.css">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -15,8 +15,9 @@
 
   <!-- Top Navigation Bar -->
   <header class="nav" id="nav">
-    <a class="nav__logo" href="#top">estudio de acabados</a>
+    <a class="nav__logo" href="#top"><b>estudio</b> acabados</a>
     <nav class="nav__locale" aria-label="Idioma">
+      <span class="nav__bar" aria-hidden="true"></span>
       <a href="#" class="is-active" lang="es">ES</a>
       <a href="#" lang="en">EN</a>
     </nav>
@@ -34,13 +35,12 @@
 
     <!-- Hero -->
     <section class="hero" aria-label="Portada">
-      <div class="hero__media" aria-hidden="true">
-        <span class="blob blob--sage"></span>
-        <span class="blob blob--amber"></span>
-        <span class="blob blob--oxblood"></span>
-        <span class="blob blob--amber blob--late"></span>
+      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <div class="hero__center">
+        <h1 class="hero__title">B<em>i</em>en Acabado</h1>
+        <span class="hero__dot" aria-hidden="true"></span>
       </div>
-      <h1 class="hero__title">Bien<br>Acabado</h1>
 
       <!-- Rotating Scroll Indicator -->
       <a class="scroll-badge" href="#manifiesto" aria-label="Desplazarse hacia abajo">
@@ -48,8 +48,8 @@
           <defs>
             <path id="circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
           </defs>
-          <text><textPath href="#circle" textLength="286" lengthAdjust="spacingAndGlyphs">DESLIZA HACIA ABAJO · DESLIZA HACIA ABAJO · </textPath></text>
-          <path class="scroll-badge__arrow" d="M60 46 V74 M51 65 L60 74 L69 65"/>
+          <text><textPath href="#circle" textLength="280" lengthAdjust="spacingAndGlyphs">DESLIZA · DESLIZA · DESLIZA · </textPath></text>
+          <circle class="scroll-badge__glyph" cx="60" cy="53" r="11"/><circle class="scroll-badge__glyph" cx="60" cy="67" r="11"/>
         </svg>
       </a>
     </section>
@@ -189,6 +189,7 @@
     <button class="pill pill--filled" id="cookie-accept">Aceptar</button>
   </div>
 
+  <script src="assets/hero.js"></script>
   <script src="assets/main.js"></script>
 </body>
 </html>
