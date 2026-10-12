@@ -1,48 +1,18 @@
-/* Monochrome editorial system floating on iridescent light */
+/* Monochrome editorial system floating on iridescent light — requires tokens/tokens.css */
 :root {
-  /* Colors */
-  --color-obsidian: #000000;
-  --color-paper: #ffffff;
-  --color-inkstone: #181818;
-  --color-felt-gray: #6d6d6d;
-  --color-slate-pill: #636363;
-  --color-ash-mist: #9a9a9a;
-  --color-pewter: #808080;
+  /* Base tokens live in tokens/tokens.css; these are page-level additions */
   --iris-sage: rgb(160, 224, 171);
   --iris-amber: rgb(255, 172, 46);
   --iris-oxblood: rgb(165, 45, 37);
+  --radius-pill: var(--radius-buttons);
 
-  /* Type — Inter stands in for Roobert */
-  --font-roobert: 'Roobert', 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-raleway: 'Raleway', 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-system-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-
-  --text-caption: 12px;
-  --text-body-sm: 16px;
-  --text-body: 18px;
+  /* Fluid overrides so display sizes scale down to phone width */
   --text-subheading: clamp(28px, 4vw, 39px);
   --text-heading-sm: clamp(34px, 5vw, 54px);
   --text-heading: clamp(40px, 7.2vw, 78px);
   --text-heading-lg: clamp(52px, 8.7vw, 94px);
   --text-display: clamp(72px, 20.8vw, 225px);
-
-  /* Spacing */
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-28: 28px;
-  --spacing-40: 40px;
-  --spacing-48: 48px;
-  --spacing-64: 64px;
-  --spacing-68: 68px;
   --spacing-152: clamp(88px, 14vw, 152px);
-
-  --page-max-width: 1078px;
-  --section-gap: 46px;
-  --element-gap: 14px;
-
-  --radius-pill: 75px;
-
-  --ease-glide: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
