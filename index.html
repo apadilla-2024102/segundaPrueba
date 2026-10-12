@@ -3,193 +3,347 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Estudio de Acabados</title>
-  <meta name="description" content="Asesoría consultiva en acabados para proyectos residenciales y comerciales: pisos, muros, baños y exteriores especificados para durar.">
+  <title>Watch Series 12</title>
+  <meta name="description" content="Estudio de diseño no oficial de la página de producto de un reloj inteligente: escenario negro, hardware en bronce y métricas de salud animadas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="tokens/tokens.css">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <header class="nav" id="nav">
-    <a class="nav__logo" href="#top"><b>estudio</b> acabados</a>
-    <nav class="nav__locale" aria-label="Idioma">
-      <span class="nav__bar" aria-hidden="true"></span>
-      <a href="#" class="is-active" lang="es">ES</a>
-      <a href="#" lang="en">EN</a>
-    </nav>
-    <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menú</button>
-    <ul class="nav__menu" id="menu">
-      <li><a href="#proyectos">PROYECTOS</a></li>
-      <li><a href="#manifiesto">MANIFIESTO</a></li>
-      <li><a href="#guia">GUÍA DE COMPRA</a></li>
-      <li><a href="#clientes">PARA QUIÉN</a></li>
-      <li><a href="#contacto">CONTACTO</a></li>
-    </ul>
+  <!-- Shared watch hardware: case, bands, crown. Finish comes from --m1/--m2/--m3 on the host <svg>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-case" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" style="stop-color:var(--m1)"/>
+        <stop offset=".1" style="stop-color:var(--m2)"/>
+        <stop offset=".28" style="stop-color:var(--m3)"/>
+        <stop offset=".72" style="stop-color:var(--m3)"/>
+        <stop offset=".9" style="stop-color:var(--m2)"/>
+        <stop offset="1" style="stop-color:var(--m1)"/>
+      </linearGradient>
+      <radialGradient id="g-sheen" cx=".3" cy=".18" r=".6">
+        <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="g-band-top" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#000"/>
+        <stop offset="1" style="stop-color:var(--band)"/>
+      </linearGradient>
+      <linearGradient id="g-band-bottom" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" style="stop-color:var(--band)"/>
+        <stop offset="1" stop-color="#000"/>
+      </linearGradient>
+      <linearGradient id="g-band-shade" x1="0" x2="1">
+        <stop offset="0" stop-color="#000" stop-opacity=".7"/>
+        <stop offset=".25" stop-color="#000" stop-opacity="0"/>
+        <stop offset=".75" stop-color="#000" stop-opacity="0"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".7"/>
+      </linearGradient>
+      <linearGradient id="g-crown" x1="0" x2="1">
+        <stop offset="0" style="stop-color:var(--m1)"/>
+        <stop offset=".5" style="stop-color:var(--m2)"/>
+        <stop offset="1" style="stop-color:var(--m1)"/>
+      </linearGradient>
+      <pattern id="p-knit" width="8" height="6" patternUnits="userSpaceOnUse">
+        <path d="M0 3 Q2 0 4 3 T8 3" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1"/>
+      </pattern>
+      <symbol id="watch-body" viewBox="0 0 400 640">
+        <rect x="104" y="0" width="192" height="190" fill="url(#g-band-top)"/>
+        <rect x="104" y="0" width="192" height="190" fill="url(#p-knit)"/>
+        <rect x="104" y="0" width="192" height="190" fill="url(#g-band-shade)"/>
+        <rect x="104" y="450" width="192" height="190" fill="url(#g-band-bottom)"/>
+        <rect x="104" y="450" width="192" height="190" fill="url(#p-knit)"/>
+        <rect x="104" y="450" width="192" height="190" fill="url(#g-band-shade)"/>
+        <rect x="336" y="230" width="20" height="62" rx="7" fill="url(#g-crown)"/>
+        <g stroke="#000" stroke-opacity=".35" stroke-width="1.2">
+          <path d="M340 236v50M344 236v50M348 236v50M352 236v50"/>
+        </g>
+        <rect x="337" y="312" width="11" height="78" rx="5" fill="url(#g-crown)"/>
+        <rect x="58" y="146" width="284" height="348" rx="82" fill="url(#g-case)"/>
+        <rect x="58" y="146" width="284" height="348" rx="82" fill="url(#g-sheen)"/>
+        <rect x="68" y="156" width="264" height="328" rx="74" fill="#050505"/>
+        <rect x="76" y="164" width="248" height="312" rx="68" fill="#000"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Global Navigation Bar -->
+  <header class="gnav">
+    <div class="gnav__inner">
+      <a class="gnav__brand" href="#top" aria-label="Inicio">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><rect x="4" y="2" width="12" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="16.5" y="7" width="1.6" height="4" rx=".8" fill="currentColor"/></svg>
+      </a>
+      <ul class="gnav__links">
+        <li><a href="#top">Tienda</a></li>
+        <li><a href="#top">Watch</a></li>
+        <li><a href="#salud">Salud</a></li>
+        <li><a href="#fitness">Fitness</a></li>
+        <li><a href="#comparar">Comparar</a></li>
+        <li><a href="#comprar">Accesorios</a></li>
+        <li><a href="#pie">Soporte</a></li>
+      </ul>
+      <div class="gnav__icons">
+        <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3 5h10l-1 9H4z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M5.5 5V4a2.5 2.5 0 015 0v1" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+      </div>
+    </div>
   </header>
+
+  <!-- Local Product Navigation -->
+  <nav class="lnav" aria-label="Producto">
+    <div class="lnav__inner">
+      <a class="lnav__title" href="#top">Watch Series 12</a>
+      <ul class="lnav__links">
+        <li><a href="#top" class="is-current">Resumen</a></li>
+        <li><a href="#salud">Salud</a></li>
+        <li><a href="#diseno">Diseño</a></li>
+        <li><a href="#comparar">Comparar</a></li>
+      </ul>
+      <a class="btn-buy btn-buy--sm" href="#comprar">Comprar</a>
+    </div>
+  </nav>
 
   <main id="top">
 
-    <!-- Hero -->
-    <section class="hero" aria-label="Portada">
-      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero__fallback" aria-hidden="true"></div>
-      <div class="hero__center">
-        <h1 class="hero__title">B<em>i</em>en Acabado</h1>
-        <span class="hero__dot" aria-hidden="true"></span>
-      </div>
-
-      <!-- Rotating Scroll Indicator -->
-      <a class="scroll-badge" href="#manifiesto" aria-label="Desplazarse hacia abajo">
-        <svg viewBox="0 0 120 120" aria-hidden="true">
-          <defs>
-            <path id="circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
-          </defs>
-          <text><textPath href="#circle" textLength="280" lengthAdjust="spacingAndGlyphs">DESLIZA · DESLIZA · DESLIZA · </textPath></text>
-          <circle class="scroll-badge__glyph" cx="60" cy="53" r="11"/><circle class="scroll-badge__glyph" cx="60" cy="67" r="11"/>
+    <!-- Hero Product Stage -->
+    <section class="hero" aria-label="Presentación">
+      <div class="hero__stage" aria-hidden="true">
+        <svg class="watch watch--hero" viewBox="0 0 400 640">
+          <use href="#watch-body"/>
+          <g class="face">
+            <text x="200" y="230" class="face__date">MAR 12</text>
+            <text x="200" y="302" class="face__time" data-clock>10:09</text>
+            <g class="rings" transform="translate(200 390) rotate(-90)">
+              <circle r="44" class="ring ring--track ring--move"/>
+              <circle r="44" class="ring ring--move" pathLength="100" style="--fill:82"/>
+              <circle r="33" class="ring ring--track ring--exercise"/>
+              <circle r="33" class="ring ring--exercise" pathLength="100" style="--fill:64"/>
+              <circle r="22" class="ring ring--track ring--stand"/>
+              <circle r="22" class="ring ring--stand" pathLength="100" style="--fill:91"/>
+            </g>
+          </g>
+          <rect class="glare" x="76" y="164" width="248" height="312" rx="68"/>
         </svg>
-      </a>
+      </div>
+
+      <div class="hero__copy">
+        <span class="badge badge--soon">Disponible pronto</span>
+        <p class="hero__eyebrow">Watch Series 12</p>
+        <h1 class="hero__title">Más listo.<br>Más brillante.<br>Más tuyo.</h1>
+      </div>
+
+      <div class="capsule">
+        <div class="capsule__price">
+          <span>Desde $399</span>
+          <span class="capsule__sub">o $33.25/mes por 12 meses*</span>
+        </div>
+        <a class="btn-buy" href="#comprar">Comprar</a>
+      </div>
+
+      <button class="pause" type="button" aria-label="Pausar animaciones" aria-pressed="false">
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
+          <g class="pause__icon-pause"><rect x="3.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/></g>
+          <path class="pause__icon-play" d="M4 2.5l9 5.5-9 5.5z" fill="currentColor"/>
+        </svg>
+      </button>
     </section>
 
-    <!-- Manifesto -->
-    <section class="section container manifesto reveal" id="manifiesto">
-      <p class="eyebrow">Manifiesto</p>
-      <h2 class="whisper">Un acabado mal elegido se paga dos veces. Nosotros te ayudamos a pagarlo una sola.</h2>
-      <div class="split">
-        <p class="body">Antes de mostrarte un catálogo, preguntamos: tipo de proyecto, tráfico, humedad, exterior o interior, presupuesto y plazo. Con esas cinco respuestas descartamos el 80% de las opciones que no van a funcionar.</p>
-        <a class="pill pill--light" href="#contacto">Agenda una asesoría</a>
+    <!-- Intro statement -->
+    <section class="intro" aria-label="Introducción">
+      <p class="intro__text reveal">
+        La pantalla más grande y brillante hasta ahora. Un chip más rápido.
+        <span>Sensores que te conocen mejor cada día.</span>
+        Y una batería que llega hasta mañana.
+      </p>
+    </section>
+
+    <!-- Health -->
+    <section class="section" id="salud">
+      <div class="wrap">
+        <p class="eyebrow reveal">Salud</p>
+        <h2 class="section-heading reveal">Tu corazón.<br>En primer plano.</h2>
+      </div>
+
+      <div class="cards wrap-wide">
+        <!-- Heart rate -->
+        <article class="card card--black card--wide reveal">
+          <div class="card__copy">
+            <h3 class="feature-label">Frecuencia cardiaca</h3>
+            <p class="card__text">Lecturas en segundo plano todo el día y notificaciones si tu ritmo sale de lo habitual.</p>
+            <p class="metric metric--red"><span data-count="72">0</span><small>LPM</small></p>
+          </div>
+          <div class="card__media">
+            <svg class="watch watch--card" viewBox="0 0 400 640" aria-hidden="true">
+              <use href="#watch-body"/>
+              <g class="face">
+                <g transform="translate(200 250)">
+                  <path class="heart" d="M0 22 C-34 -4 -30 -30 -12 -32 C-4 -33 0 -26 0 -22 C0 -26 4 -33 12 -32 C30 -30 34 -4 0 22Z" fill="var(--color-pulse-red)"/>
+                </g>
+                <text x="200" y="350" class="face__bpm" data-count="72">0</text>
+                <text x="200" y="384" class="face__unit">LPM</text>
+                <polyline class="ecg" pathLength="100" points="96,428 140,428 152,428 160,410 168,446 176,400 186,436 194,428 240,428 248,428 256,412 264,444 272,402 282,436 290,428 304,428"/>
+              </g>
+              <rect class="glare" x="76" y="164" width="248" height="312" rx="68"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Sensor -->
+        <article class="card card--black reveal">
+          <div class="card__copy">
+            <h3 class="feature-label">Sensor de nueva generación</h3>
+            <p class="card__text">Luz verde y fotodiodos que leen tu pulso y oxígeno en sangre.</p>
+          </div>
+          <div class="sensor" aria-hidden="true">
+            <div class="sensor__back">
+              <span class="sensor__led" style="--a:0deg"></span>
+              <span class="sensor__led" style="--a:90deg"></span>
+              <span class="sensor__led" style="--a:180deg"></span>
+              <span class="sensor__led" style="--a:270deg"></span>
+              <span class="sensor__core"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sleep -->
+        <article class="card card--black reveal">
+          <div class="card__copy">
+            <h3 class="feature-label">Puntuación de sueño</h3>
+            <p class="card__text">Duración, interrupciones y fases, resumidas en un solo número.</p>
+          </div>
+          <div class="sleep" aria-hidden="true">
+            <p class="metric"><span data-count="86">0</span></p>
+            <div class="sleep__bars">
+              <i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:84%"></i><i style="--h:56%"></i>
+              <i style="--h:92%"></i><i style="--h:70%"></i><i style="--h:44%"></i><i style="--h:66%"></i>
+              <i style="--h:88%"></i><i style="--h:52%"></i><i style="--h:30%"></i><i style="--h:58%"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- Battery -->
+        <article class="card card--black card--wide reveal" id="fitness">
+          <div class="card__copy">
+            <h3 class="feature-label">Batería para todo el día. Y la noche.</h3>
+            <p class="card__text">Hasta 24 horas de uso normal y hasta 38 en modo de bajo consumo. Carga al 80% en unos 30 minutos.</p>
+          </div>
+          <div class="battery" aria-hidden="true">
+            <p class="metric metric--green metric--xl"><span data-count="24">0</span><small>h</small></p>
+            <div class="battery__bar"><span></span></div>
+            <p class="battery__note">Hasta 38 h en modo de bajo consumo</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Statement band (dark) -->
-    <section class="band" aria-label="Declaración">
-      <div class="container">
-        <p class="anchor">Tráfico.<br>Humedad.<br>Vida útil.</p>
-        <p class="band__note">Las tres variables que deciden un piso antes que el color.</p>
+    <!-- Scroll-scrubbed display story -->
+    <section class="scrub" aria-label="Pantalla">
+      <div class="scrub__sticky">
+        <svg class="watch watch--scrub" viewBox="0 0 400 640" aria-hidden="true">
+          <use href="#watch-body"/>
+          <g class="face scrub__face">
+            <text x="200" y="300" class="face__time" data-clock>10:09</text>
+            <text x="200" y="340" class="face__date face__date--muted">MARTES</text>
+          </g>
+          <rect class="glare" x="76" y="164" width="248" height="312" rx="68"/>
+        </svg>
+        <div class="scrub__captions">
+          <p class="scrub__caption" data-from="0" data-to=".33">Pantalla siempre activa.<br><span>Ahora con segundero.</span></p>
+          <p class="scrub__caption" data-from=".33" data-to=".66">Hasta 2,000 nits.<br><span>Legible bajo el sol.</span></p>
+          <p class="scrub__caption" data-from=".66" data-to="1.01">Ángulos más amplios.<br><span>Ves la hora sin girar la muñeca.</span></p>
+        </div>
       </div>
     </section>
 
-    <!-- Projects list -->
-    <section class="section container" id="proyectos">
-      <p class="eyebrow">Proyectos</p>
-      <ol class="projects">
-        <li class="project reveal">
-          <div class="project__media tex tex--stone" role="img" aria-label="Porcelanato gran formato en vestíbulo"></div>
-          <div class="project__meta">
-            <h3>Vestíbulo corporativo — Porcelanato rectificado 120×60</h3>
-            <p>Tráfico alto · PEI 5 · Junta de 2 mm · Cero reemplazos en 4 años</p>
+    <!-- Finishes -->
+    <section class="section section--charcoal" id="diseno">
+      <div class="wrap">
+        <p class="eyebrow reveal">Diseño</p>
+        <h2 class="feature-display reveal">Titanio.<br>En tres acabados.</h2>
+      </div>
+      <div class="finish wrap reveal">
+        <svg class="watch watch--finish" viewBox="0 0 400 640" aria-hidden="true">
+          <use href="#watch-body"/>
+          <g class="face">
+            <text x="200" y="302" class="face__time" data-clock>10:09</text>
+          </g>
+          <rect class="glare" x="76" y="164" width="248" height="312" rx="68"/>
+        </svg>
+        <div class="finish__picker">
+          <p class="finish__name" aria-live="polite">Bronce</p>
+          <div class="swatches" role="radiogroup" aria-label="Acabado">
+            <button class="swatch is-active" role="radio" aria-checked="true" data-finish="bronze" data-name="Bronce" style="--sw:#b07a4f" aria-label="Bronce"></button>
+            <button class="swatch" role="radio" aria-checked="false" data-finish="natural" data-name="Titanio natural" style="--sw:#b9b5ae" aria-label="Titanio natural"></button>
+            <button class="swatch" role="radio" aria-checked="false" data-finish="slate" data-name="Pizarra" style="--sw:#3c3c40" aria-label="Pizarra"></button>
           </div>
-        </li>
-        <li class="project project--flip reveal">
-          <div class="project__media tex tex--wood" role="img" aria-label="Piso vinílico SPC en departamento"></div>
-          <div class="project__meta">
-            <h3>Torre residencial, 84 unidades — SPC capa de uso 0.5 mm</h3>
-            <p>Volumen · Instalación flotante en 1 día por unidad · Resistente al agua</p>
-          </div>
-        </li>
-        <li class="project reveal">
-          <div class="project__media tex tex--micro" role="img" aria-label="Microcemento en baño"></div>
-          <div class="project__meta">
-            <h3>Baño principal — Muro de porcelanato vs. microcemento</h3>
-            <p>Zona húmeda · Sellador poliuretano · Mantenimiento anual</p>
-          </div>
-        </li>
-        <li class="project project--flip reveal">
-          <div class="project__media tex tex--deck" role="img" aria-label="Terraza exterior con porcelanato antiderrapante"></div>
-          <div class="project__meta">
-            <h3>Terraza exterior — Porcelanato 20 mm antiderrapante R11</h3>
-            <p>Intemperie · Heladas y sol directo · Garantía de fabricante 10 años</p>
-          </div>
-        </li>
-      </ol>
+        </div>
+      </div>
     </section>
 
-    <!-- Buying guide -->
-    <section class="section container" id="guia">
-      <p class="eyebrow">Guía de compra</p>
-      <h2 class="heading-sm reveal">Si buscas esto, elige aquello.</h2>
-      <dl class="guide">
-        <div class="guide__row reveal">
-          <dt>Si buscas cero mantenimiento en tráfico alto</dt>
-          <dd><strong>Porcelanato rectificado PEI 4–5.</strong> Absorción menor a 0.5%, no se raya con arena ni tacones. Vida útil de 25+ años. Frente al cerámico, cuesta ~30% más y dura el doble.</dd>
+    <!-- Comparison on a white field -->
+    <section class="paper" id="comparar">
+      <div class="compare wrap-wide reveal">
+        <h2 class="section-heading section-heading--compare">¿Por qué actualizar?</h2>
+        <label class="select">
+          <span class="visually-hidden">Tu modelo actual</span>
+          <select id="compare-model">
+            <option value="s9">Comparar con Series 9</option>
+            <option value="s7">Comparar con Series 7</option>
+            <option value="s5">Comparar con Series 5</option>
+            <option value="se">Comparar con SE</option>
+          </select>
+          <svg viewBox="0 0 12 8" width="12" height="8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </label>
+        <div class="tiles">
+          <div class="tile"><p class="tile__value" data-key="screen">Hasta 40%</p><p class="tile__label">más área de pantalla</p></div>
+          <div class="tile"><p class="tile__value" data-key="bright">2x</p><p class="tile__label">más brillo en exteriores</p></div>
+          <div class="tile"><p class="tile__value tile__value--green" data-key="charge">80% en 30 min</p><p class="tile__label">carga rápida</p></div>
+          <div class="tile"><p class="tile__value" data-key="chip">Hasta 30%</p><p class="tile__label">más rápido</p></div>
+          <div class="tile"><p class="tile__value tile__value--red" data-key="sensor">Apnea del sueño</p><p class="tile__label">notificaciones de salud</p></div>
+          <div class="tile"><p class="tile__value tile__value--green" data-key="battery">Hasta 24 h</p><p class="tile__label">de batería</p></div>
         </div>
-        <div class="guide__row reveal">
-          <dt>Si buscas calidez de madera sin miedo al agua</dt>
-          <dd><strong>Vinílico SPC con capa de uso 0.5 mm.</strong> Impermeable, silencioso y se instala sobre piso existente. Frente a la madera de ingeniería, no se hincha ni requiere barniz.</dd>
-        </div>
-        <div class="guide__row reveal">
-          <dt>Si buscas un look continuo, sin juntas</dt>
-          <dd><strong>Microcemento con sellador poliuretano.</strong> Ideal en muros y baños de diseño. Exige aplicador certificado y resellado cada 12–18 meses: elígelo por estética, no por bajo mantenimiento.</dd>
-        </div>
-        <div class="guide__row reveal">
-          <dt>Si es exterior o alberca</dt>
-          <dd><strong>Porcelanato 20 mm con antiderrapante R11.</strong> Soporta heladas, sol y cargas. Un piso interior en exterior es el error de compra más caro que vemos.</dd>
-        </div>
-      </dl>
+      </div>
     </section>
 
-    <!-- Client types -->
-    <section class="band band--clients" id="clientes">
-      <div class="container">
-        <p class="eyebrow eyebrow--inverse">Para quién</p>
-        <div class="clients">
-          <article class="client reveal">
-            <h3>Cliente final</h3>
-            <p>Estética que te guste hoy y mantenimiento que no te pese mañana. Muestras físicas, simulación en tu espacio y una sola recomendación clara.</p>
+    <!-- Ways to buy -->
+    <section class="paper paper--porcelain" id="comprar">
+      <div class="wrap-wide">
+        <h2 class="section-heading section-heading--ink reveal">Formas de comprar.</h2>
+        <div class="buy">
+          <article class="card card--white reveal">
+            <h3 class="card-heading">Entrega sin costo.</h3>
+            <p class="card__text card__text--ink">Recíbelo en casa o recógelo en tienda el mismo día.</p>
+            <a class="inline-link" href="#comprar">Más información ›</a>
           </article>
-          <article class="client reveal">
-            <h3>Arquitecto</h3>
-            <p>Fichas técnicas, PEI, absorción, coeficiente de fricción, formatos y tonos por lote. Especificación lista para memoria descriptiva.</p>
+          <article class="card card--white reveal">
+            <h3 class="card-heading">Meses sin intereses.</h3>
+            <p class="card__text card__text--ink">Paga en hasta 12 mensualidades con tarjetas participantes.</p>
+            <a class="inline-link" href="#comprar">Ver condiciones ›</a>
           </article>
-          <article class="client reveal">
-            <h3>Desarrollador</h3>
-            <p>Costo por m² instalado, disponibilidad por volumen, consistencia de lote y garantía por escrito. Menos reclamos en postventa.</p>
+          <article class="card card--white reveal">
+            <h3 class="card-heading">Entrega tu reloj anterior.</h3>
+            <p class="card__text card__text--ink">Obtén crédito para tu compra al intercambiar un modelo que califique.</p>
+            <a class="inline-link" href="#comprar">Calcula tu crédito ›</a>
           </article>
         </div>
-        <a class="pill pill--dark" href="#contacto">Cotiza tu proyecto</a>
+        <div class="buy__cta reveal">
+          <a class="btn-buy btn-buy--lg" href="#comprar">Comprar</a>
+          <a class="btn-outline" href="#comparar">Comparar modelos</a>
+        </div>
       </div>
     </section>
-
-    <!-- Closing statement -->
-    <section class="section container closing reveal" id="contacto">
-      <h2 class="whisper">Por uso y durabilidad, la mejor inversión es la que eliges una sola vez.</h2>
-      <div class="split">
-        <p class="body">Cuéntanos tipo de proyecto, metros, ubicación y presupuesto. Te respondemos con una recomendación principal, una alternativa y el porqué de cada una.</p>
-        <a class="pill pill--light" href="mailto:hola@ejemplo.com">Escríbenos</a>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__col">
-        <h4>Showroom</h4>
-        <address>Av. Principal 000<br>Col. Centro<br>Lun–Sáb 9:00–18:00</address>
-      </div>
-      <div class="footer__col">
-        <h4>Obra y proyectos</h4>
-        <address>Visita técnica en sitio<br>Medición y cuantificación<br>Supervisión de instalación</address>
-      </div>
-      <div class="footer__col">
-        <h4>Garantía</h4>
-        <address>Por escrito, de fabricante<br>Hasta 10 años en porcelanato<br>Asesoría postventa</address>
-      </div>
+  <footer class="footer" id="pie">
+    <div class="wrap-wide">
+      <p>* Precio y mensualidades ilustrativos. Las cifras de batería, brillo y rendimiento son ejemplos para fines de diseño.</p>
+      <p>Estudio de diseño no oficial con fines de demostración. No está afiliado ni respaldado por ningún fabricante.</p>
     </div>
-    <p class="container footer__legal">© 2026 estudio de acabados</p>
   </footer>
 
-  <!-- Cookie Banner -->
-  <div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
-    <p>Usamos cookies para mejorar tu experiencia.</p>
-    <button class="pill pill--filled" id="cookie-accept">Aceptar</button>
-  </div>
-
-  <script src="assets/hero.js"></script>
   <script src="assets/main.js"></script>
 </body>
 </html>
