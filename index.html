@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudio de Acabados</title>
+  <meta name="description" content="Asesoría consultiva en acabados para proyectos residenciales y comerciales: pisos, muros, baños y exteriores especificados para durar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top">estudio de acabados</a>
+    <nav class="nav__locale" aria-label="Idioma">
+      <a href="#" class="is-active" lang="es">ES</a>
+      <a href="#" lang="en">EN</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+    <ul class="nav__menu" id="menu">
+      <li><a href="#proyectos">PROYECTOS</a></li>
+      <li><a href="#manifiesto">MANIFIESTO</a></li>
+      <li><a href="#guia">GUÍA DE COMPRA</a></li>
+      <li><a href="#clientes">PARA QUIÉN</a></li>
+      <li><a href="#contacto">CONTACTO</a></li>
+    </ul>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Portada">
+      <div class="hero__media" aria-hidden="true">
+        <span class="blob blob--sage"></span>
+        <span class="blob blob--amber"></span>
+        <span class="blob blob--oxblood"></span>
+        <span class="blob blob--amber blob--late"></span>
+      </div>
+      <h1 class="hero__title">Bien<br>Acabado</h1>
+
+      <!-- Rotating Scroll Indicator -->
+      <a class="scroll-badge" href="#manifiesto" aria-label="Desplazarse hacia abajo">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <path id="circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
+          </defs>
+          <text><textPath href="#circle" textLength="286" lengthAdjust="spacingAndGlyphs">DESLIZA HACIA ABAJO · DESLIZA HACIA ABAJO · </textPath></text>
+          <path class="scroll-badge__arrow" d="M60 46 V74 M51 65 L60 74 L69 65"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="section container manifesto reveal" id="manifiesto">
+      <p class="eyebrow">Manifiesto</p>
+      <h2 class="whisper">Un acabado mal elegido se paga dos veces. Nosotros te ayudamos a pagarlo una sola.</h2>
+      <div class="split">
+        <p class="body">Antes de mostrarte un catálogo, preguntamos: tipo de proyecto, tráfico, humedad, exterior o interior, presupuesto y plazo. Con esas cinco respuestas descartamos el 80% de las opciones que no van a funcionar.</p>
+        <a class="pill pill--light" href="#contacto">Agenda una asesoría</a>
+      </div>
+    </section>
+
+    <!-- Statement band (dark) -->
+    <section class="band" aria-label="Declaración">
+      <div class="container">
+        <p class="anchor">Tráfico.<br>Humedad.<br>Vida útil.</p>
+        <p class="band__note">Las tres variables que deciden un piso antes que el color.</p>
+      </div>
+    </section>
+
+    <!-- Projects list -->
+    <section class="section container" id="proyectos">
+      <p class="eyebrow">Proyectos</p>
+      <ol class="projects">
+        <li class="project reveal">
+          <div class="project__media tex tex--stone" role="img" aria-label="Porcelanato gran formato en vestíbulo"></div>
+          <div class="project__meta">
+            <h3>Vestíbulo corporativo — Porcelanato rectificado 120×60</h3>
+            <p>Tráfico alto · PEI 5 · Junta de 2 mm · Cero reemplazos en 4 años</p>
+          </div>
+        </li>
+        <li class="project project--flip reveal">
+          <div class="project__media tex tex--wood" role="img" aria-label="Piso vinílico SPC en departamento"></div>
+          <div class="project__meta">
+            <h3>Torre residencial, 84 unidades — SPC capa de uso 0.5 mm</h3>
+            <p>Volumen · Instalación flotante en 1 día por unidad · Resistente al agua</p>
+          </div>
+        </li>
+        <li class="project reveal">
+          <div class="project__media tex tex--micro" role="img" aria-label="Microcemento en baño"></div>
+          <div class="project__meta">
+            <h3>Baño principal — Muro de porcelanato vs. microcemento</h3>
+            <p>Zona húmeda · Sellador poliuretano · Mantenimiento anual</p>
+          </div>
+        </li>
+        <li class="project project--flip reveal">
+          <div class="project__media tex tex--deck" role="img" aria-label="Terraza exterior con porcelanato antiderrapante"></div>
+          <div class="project__meta">
+            <h3>Terraza exterior — Porcelanato 20 mm antiderrapante R11</h3>
+            <p>Intemperie · Heladas y sol directo · Garantía de fabricante 10 años</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Buying guide -->
+    <section class="section container" id="guia">
+      <p class="eyebrow">Guía de compra</p>
+      <h2 class="heading-sm reveal">Si buscas esto, elige aquello.</h2>
+      <dl class="guide">
+        <div class="guide__row reveal">
+          <dt>Si buscas cero mantenimiento en tráfico alto</dt>
+          <dd><strong>Porcelanato rectificado PEI 4–5.</strong> Absorción menor a 0.5%, no se raya con arena ni tacones. Vida útil de 25+ años. Frente al cerámico, cuesta ~30% más y dura el doble.</dd>
+        </div>
+        <div class="guide__row reveal">
+          <dt>Si buscas calidez de madera sin miedo al agua</dt>
+          <dd><strong>Vinílico SPC con capa de uso 0.5 mm.</strong> Impermeable, silencioso y se instala sobre piso existente. Frente a la madera de ingeniería, no se hincha ni requiere barniz.</dd>
+        </div>
+        <div class="guide__row reveal">
+          <dt>Si buscas un look continuo, sin juntas</dt>
+          <dd><strong>Microcemento con sellador poliuretano.</strong> Ideal en muros y baños de diseño. Exige aplicador certificado y resellado cada 12–18 meses: elígelo por estética, no por bajo mantenimiento.</dd>
+        </div>
+        <div class="guide__row reveal">
+          <dt>Si es exterior o alberca</dt>
+          <dd><strong>Porcelanato 20 mm con antiderrapante R11.</strong> Soporta heladas, sol y cargas. Un piso interior en exterior es el error de compra más caro que vemos.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Client types -->
+    <section class="band band--clients" id="clientes">
+      <div class="container">
+        <p class="eyebrow eyebrow--inverse">Para quién</p>
+        <div class="clients">
+          <article class="client reveal">
+            <h3>Cliente final</h3>
+            <p>Estética que te guste hoy y mantenimiento que no te pese mañana. Muestras físicas, simulación en tu espacio y una sola recomendación clara.</p>
+          </article>
+          <article class="client reveal">
+            <h3>Arquitecto</h3>
+            <p>Fichas técnicas, PEI, absorción, coeficiente de fricción, formatos y tonos por lote. Especificación lista para memoria descriptiva.</p>
+          </article>
+          <article class="client reveal">
+            <h3>Desarrollador</h3>
+            <p>Costo por m² instalado, disponibilidad por volumen, consistencia de lote y garantía por escrito. Menos reclamos en postventa.</p>
+          </article>
+        </div>
+        <a class="pill pill--dark" href="#contacto">Cotiza tu proyecto</a>
+      </div>
+    </section>
+
+    <!-- Closing statement -->
+    <section class="section container closing reveal" id="contacto">
+      <h2 class="whisper">Por uso y durabilidad, la mejor inversión es la que eliges una sola vez.</h2>
+      <div class="split">
+        <p class="body">Cuéntanos tipo de proyecto, metros, ubicación y presupuesto. Te respondemos con una recomendación principal, una alternativa y el porqué de cada una.</p>
+        <a class="pill pill--light" href="mailto:hola@ejemplo.com">Escríbenos</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h4>Showroom</h4>
+        <address>Av. Principal 000<br>Col. Centro<br>Lun–Sáb 9:00–18:00</address>
+      </div>
+      <div class="footer__col">
+        <h4>Obra y proyectos</h4>
+        <address>Visita técnica en sitio<br>Medición y cuantificación<br>Supervisión de instalación</address>
+      </div>
+      <div class="footer__col">
+        <h4>Garantía</h4>
+        <address>Por escrito, de fabricante<br>Hasta 10 años en porcelanato<br>Asesoría postventa</address>
+      </div>
+    </div>
+    <p class="container footer__legal">© 2026 estudio de acabados</p>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+    <p>Usamos cookies para mejorar tu experiencia.</p>
+    <button class="pill pill--filled" id="cookie-accept">Aceptar</button>
+  </div>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
