@@ -1,0 +1,17 @@
+{
+  "name": "pulseras-brillo",
+  "version": "1.0.0",
+  "description": "Tienda de pulseras con precios en USD y pedidos por WhatsApp",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/blob": "^2.8.2",
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
