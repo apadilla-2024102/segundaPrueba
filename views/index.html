@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drea Sparkle | Fragancias, skincare y joyería en Guatemala</title>
+    <meta name="description" content="Tienda en Guatemala de fragancias Victoria's Secret y Sol de Janeiro, cuidado facial The Ordinary, maquillaje, pulseras, anillos y aretes. Precios en quetzales y pedidos por WhatsApp.">
+    <!--SEO-->
+    <meta name="theme-color" content="#2e1233">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="/img/vs-pure-seduction.jpg" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a class="saltar" href="#productos">Ir a los productos</a>
+
+    <header class="barra">
+        <a href="#inicio" class="marca" aria-label="Drea Sparkle, inicio">
+            <span class="logo"><span class="logo-drea">Drea</span><span class="logo-sparkle">Sparkle<svg class="logo-destello" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span></span>
+        </a>
+        <nav class="menu" aria-label="Principal">
+            <a href="#productos">Productos</a>
+            <a href="#como-comprar">Cómo comprar</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <div class="portada-texto">
+                <h1>Fragancias, cuidado de la piel y joyería en un solo lugar</h1>
+                <p>Productos originales y accesorios escogidos uno por uno. Mira el precio y pídelo por WhatsApp.</p>
+                <div class="portada-acciones">
+                    <a href="#productos" class="boton boton-principal">Ver productos</a>
+                    <a href="#" class="boton boton-borde" data-numero="41408342">Escribir por WhatsApp</a>
+                </div>
+            </div>
+            <div class="vitrina" aria-hidden="true">
+                <div class="arco arco-grande"><img src="/img/vs-pure-seduction.jpg" alt="" width="1000" height="921" fetchpriority="high"></div>
+                <div class="arco arco-chico arco-a"><img src="/img/pulsera-dijes-dorada.jpg" alt="" width="1000" height="928"></div>
+                <div class="arco arco-chico arco-b"><img src="/img/ordinary-hialuronico.jpg" alt="" width="1000" height="855"></div>
+                <span class="arco-linea"></span>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section class="categorias" aria-labelledby="titulo-categorias">
+            <h2 id="titulo-categorias" class="visualmente-oculto">Categorías</h2>
+            <ul class="categorias-lista" id="categorias"><!--CATEGORIAS--></ul>
+        </section>
+
+        <!-- Catálogo -->
+        <section class="catalogo" id="productos" aria-labelledby="titulo-productos">
+            <div class="catalogo-encabezado">
+                <h2 id="titulo-productos">Productos</h2>
+                <p>Precios en quetzales. El precio en dólares es aproximado.</p>
+            </div>
+            <div class="filtros" role="group" aria-label="Filtrar por categoría" id="filtros"></div>
+            <p class="contador" id="contador" aria-live="polite"><!--CONTADOR--></p>
+            <div class="rejilla" id="rejilla"><!--PRODUCTOS--></div>
+        </section>
+
+        <!-- Cómo comprar: es una secuencia real, por eso va numerada -->
+        <section class="pasos" id="como-comprar" aria-labelledby="titulo-pasos">
+            <h2 id="titulo-pasos">Cómo comprar</h2>
+            <ol class="pasos-lista">
+                <li>
+                    <h3>Elige tu producto</h3>
+                    <p>Revisa el catálogo y toca “Pedir por WhatsApp” en lo que te guste.</p>
+                </li>
+                <li>
+                    <h3>Escríbenos</h3>
+                    <p>El mensaje ya va con el nombre y el precio. Te confirmamos si está disponible.</p>
+                </li>
+                <li>
+                    <h3>Recibe tu pedido</h3>
+                    <p>Acordamos contigo la forma de pago y la entrega.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">¿Tienes una pregunta?</h2>
+            <p>Escríbenos a cualquiera de los dos números. Te ayudamos a elegir tono, aroma o talla.</p>
+            <div class="contacto-numeros">
+                <a href="#" class="boton boton-claro" data-numero="41408342">WhatsApp 4140-8342</a>
+                <a href="#" class="boton boton-claro" data-numero="51981445">WhatsApp 5198-1445</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="pie-logo" aria-hidden="true"><span class="logo logo-grande"><span class="logo-drea">Drea</span><span class="logo-sparkle">Sparkle<svg class="logo-destello" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span></span></p>
+        <p>Fragancias, cuidado de la piel y joyería</p>
+        <!--ENLACES-PIE-->
+        <p class="pie-legal">© <span id="anio"></span> Drea Sparkle. Precios en quetzales (Q).</p>
+    </footer>
+
+    <!-- Detalle del producto -->
+    <dialog class="detalle" id="detalle" aria-labelledby="detalle-nombre">
+        <button class="cerrar" data-cerrar aria-label="Cerrar">&times;</button>
+        <div class="detalle-galeria">
+            <div class="detalle-escenario" id="detalle-escenario">
+                <img id="detalle-imagen" src="" alt="">
+                <div id="detalle-sin-foto" hidden></div>
+                <button class="galeria-flecha galeria-anterior" id="foto-anterior" aria-label="Foto anterior">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+                </button>
+                <button class="galeria-flecha galeria-siguiente" id="foto-siguiente" aria-label="Foto siguiente">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+                </button>
+                <span class="galeria-contador" id="foto-contador" aria-live="polite"></span>
+            </div>
+            <div class="detalle-miniaturas" id="detalle-miniaturas"></div>
+        </div>
+        <div class="detalle-info">
+            <p class="detalle-marca" id="detalle-marca"></p>
+            <h2 id="detalle-nombre"></h2>
+            <p class="precio" id="detalle-precio"></p>
+            <p class="detalle-cantidad" id="detalle-cantidad"></p>
+            <p class="detalle-desc" id="detalle-desc"></p>
+            <h3 class="specs-titulo">Especificaciones</h3>
+            <dl class="specs" id="detalle-specs"></dl>
+            <div class="detalle-accion">
+                <a class="boton boton-principal" id="detalle-pedir" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+                <p class="detalle-nota">El pago y la entrega se coordinan por WhatsApp.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Bienvenida con mensaje de interés -->
+    <dialog class="bienvenida" id="bienvenida" aria-labelledby="bienvenida-titulo">
+        <button class="cerrar" data-cerrar aria-label="Cerrar">&times;</button>
+        <p class="bienvenida-logo" aria-hidden="true"><span class="logo"><span class="logo-drea">Drea</span><span class="logo-sparkle">Sparkle<svg class="logo-destello" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></span></span></p>
+        <h2 id="bienvenida-titulo">¡Bienvenida!</h2>
+        <p>¿Buscas algo en especial? Escríbenos y te decimos qué hay disponible hoy.</p>
+        <a href="#" class="boton boton-principal" data-numero="41408342">Escribir al 4140-8342</a>
+        <a href="#" class="boton boton-borde" data-numero="51981445">Escribir al 5198-1445</a>
+        <button class="enlace" data-cerrar>Ver el catálogo primero</button>
+    </dialog>
+
+    <!-- Botón fijo de WhatsApp -->
+    <a class="wa-fijo" href="#" data-numero="41408342" aria-label="Escríbenos por WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 10 9.9 5.2 16 5.2S27 10 27 15.8 22.1 26.4 16 26.4zm6-7.8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg>
+    </a>
+
+    <script src="/plantillas.js" defer></script>
+    <script src="/app.js" defer></script>
+    <script src="/cookies.js" defer></script>
+</body>
+</html>
