@@ -13,6 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css">
+    <script>
+        // Activa las entradas escalonadas solo si hay JavaScript; si app.js no llega, todo queda visible.
+        document.documentElement.classList.add("mov");
+        setTimeout(function () { if (!window.movimientoListo) document.documentElement.classList.remove("mov"); }, 3000);
+    </script>
 </head>
 <body>
     <a class="saltar" href="#productos">Ir a los productos</a>
@@ -32,7 +37,7 @@
         <!-- Portada -->
         <section class="portada" id="inicio">
             <div class="portada-texto">
-                <h1>Fragancias, cuidado de la piel y joyería en un solo lugar</h1>
+                <h1 aria-label="Fragancias, cuidado de la piel y joyería en un solo lugar"><span aria-hidden="true"><span class="palabra" style="--i: 0">Fragancias,</span> <span class="palabra" style="--i: 1">cuidado</span> <span class="palabra" style="--i: 2">de</span> <span class="palabra" style="--i: 3">la</span> <span class="palabra" style="--i: 4">piel</span> <span class="palabra" style="--i: 5">y</span> <span class="palabra" style="--i: 6">joyería</span> <span class="palabra" style="--i: 7">en</span> <span class="palabra" style="--i: 8">un</span> <span class="palabra" style="--i: 9">solo</span> <span class="palabra" style="--i: 10">lugar</span></span></h1>
                 <p>Productos originales y accesorios escogidos uno por uno. Mira el precio y pídelo por WhatsApp.</p>
                 <div class="portada-acciones">
                     <a href="#productos" class="boton boton-principal">Ver productos</a>
