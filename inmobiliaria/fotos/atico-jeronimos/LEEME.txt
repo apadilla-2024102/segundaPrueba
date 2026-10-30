@@ -9,7 +9,7 @@ Sube aquí estos archivos (los nombres deben coincidir con propiedades.js):
   - pergola.jpg
   - piscina.jpg
   - parque.jpg
-  - plano-1.png
+  - plano-1.svg
   - dormitorio.jpg
   - bano.jpg
   - g1.jpg
@@ -18,4 +18,4 @@ Sube aquí estos archivos (los nombres deben coincidir con propiedades.js):
   - g4.jpg
   - g5.jpg
 
-Mientras falte alguna, la web muestra un degradado elegante en su lugar.
+Mientras falte alguna, la web muestra la foto de prueba (prueba.js) o un degradado elegante.

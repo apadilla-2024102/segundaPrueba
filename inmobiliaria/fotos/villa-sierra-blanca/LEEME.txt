@@ -12,4 +12,4 @@ Sube aquí estos archivos (los nombres deben coincidir con propiedades.js):
   - dormitorio.jpg
   - bano.jpg
 
-Mientras falte alguna, la web muestra un degradado elegante en su lugar.
+Mientras falte alguna, la web muestra la foto de prueba (prueba.js) o un degradado elegante.

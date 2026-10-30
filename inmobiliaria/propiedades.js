@@ -29,6 +29,7 @@ const PROPIEDADES = [
     lema: "El corazón de la Castellana",
     precio: "Precio a consultar",
     portada: "portada.jpg",
+    video: "portada.mp4",   // opcional: vídeo de fondo en la portada (si no existe, se ve la foto)
     cifras: [["2", "Plantas"], ["2", "Dormitorios"], ["3", "Baños"], ["1", "Piscina privada"]],
     recorrido1: {
         titulo: "Planta uno",
@@ -48,10 +49,10 @@ const PROPIEDADES = [
             { foto: "piscina.jpg", titulo: "Piscina en la azotea", texto: "Una piscina privada sobre los tejados de Madrid." }
         ]
     },
-    panoramica: { foto: "vistas.jpg", texto: "Vistas al Santiago Bernabéu" },
+    panoramica: { foto: "vistas.jpg", video: "vistas.mp4", texto: "Vistas al Santiago Bernabéu" },
     planos: [
-        { foto: "plano-1.png", titulo: "Planta 1", estancias: ["Salón comedor", "Sala de estar", "Cocina con office", "Dormitorio principal en suite", "Balcón", "Segundo dormitorio con baño", "Pasillo con armarios empotrados"] },
-        { foto: "plano-2.png", titulo: "Planta 2", estancias: ["Piscina privada", "Terraza", "Cocina comedor", "Sala de estar", "Invernadero", "Baño completo con ducha"] }
+        { foto: "plano-1.svg", titulo: "Planta 1", estancias: ["Salón comedor", "Sala de estar", "Cocina con office", "Dormitorio principal en suite", "Balcón", "Segundo dormitorio con baño", "Pasillo con armarios empotrados"] },
+        { foto: "plano-2.svg", titulo: "Planta 2", estancias: ["Piscina privada", "Terraza", "Cocina comedor", "Sala de estar", "Invernadero", "Baño completo con ducha"] }
     ],
     dormitorio: {
         foto: "dormitorio.jpg",
@@ -108,7 +109,7 @@ const PROPIEDADES = [
     },
     panoramica: { foto: "parque.jpg", texto: "Cada estación del parque, desde tu ventana" },
     planos: [
-        { foto: "plano-1.png", titulo: "Planta de vivienda", estancias: ["Salón · 46 m²", "Cocina · 20 m²", "Biblioteca · 16 m²", "Suite principal · 30 m²", "Dos dormitorios dobles", "Tres baños"] }
+        { foto: "plano-1.svg", titulo: "Planta de vivienda", estancias: ["Salón · 46 m²", "Cocina · 20 m²", "Biblioteca · 16 m²", "Suite principal · 30 m²", "Dos dormitorios dobles", "Tres baños"] }
     ],
     dormitorio: {
         foto: "dormitorio.jpg",
