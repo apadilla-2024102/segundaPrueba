@@ -1,0 +1,21 @@
+Fotos de Ático Los Jerónimos.
+Sube aquí estos archivos (los nombres deben coincidir con propiedades.js):
+
+  - portada.jpg
+  - salon.jpg
+  - cocina.jpg
+  - biblioteca.jpg
+  - terraza.jpg
+  - pergola.jpg
+  - piscina.jpg
+  - parque.jpg
+  - plano-1.png
+  - dormitorio.jpg
+  - bano.jpg
+  - g1.jpg
+  - g2.jpg
+  - g3.jpg
+  - g4.jpg
+  - g5.jpg
+
+Mientras falte alguna, la web muestra un degradado elegante en su lugar.

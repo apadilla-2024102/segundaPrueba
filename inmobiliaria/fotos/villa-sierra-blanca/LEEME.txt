@@ -1,0 +1,15 @@
+Fotos de Villa Sierra Blanca.
+Sube aquí estos archivos (los nombres deben coincidir con propiedades.js):
+
+  - portada.jpg
+  - salon.jpg
+  - cocina.jpg
+  - comedor.jpg
+  - piscina.jpg
+  - terraza.jpg
+  - jardin.jpg
+  - mar.jpg
+  - dormitorio.jpg
+  - bano.jpg
+
+Mientras falte alguna, la web muestra un degradado elegante en su lugar.

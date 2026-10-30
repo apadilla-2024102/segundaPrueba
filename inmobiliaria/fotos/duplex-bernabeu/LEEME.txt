@@ -1,0 +1,23 @@
+Fotos de Dúplex Bernabéu.
+Sube aquí estos archivos (los nombres deben coincidir con propiedades.js):
+
+  - portada.jpg
+  - salon.jpg
+  - estar.jpg
+  - escalera.jpg
+  - cocina2.jpg
+  - invernadero.jpg
+  - piscina.jpg
+  - vistas.jpg
+  - plano-1.png
+  - plano-2.png
+  - dormitorio.jpg
+  - bano.jpg
+  - g1.jpg
+  - g2.jpg
+  - g3.jpg
+  - g4.jpg
+  - g5.jpg
+  - g6.jpg
+
+Mientras falte alguna, la web muestra un degradado elegante en su lugar.
